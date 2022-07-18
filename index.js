@@ -7,7 +7,13 @@ app.get("/", (request, response) => {
   console.log(`Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
   response.sendStatus(200);
 });
-app.listen(process.env.PORT); // Recebe solicitações que o deixa online //numero da porta: 3000
+app.listen(process.env.PORT);
+// trata erros
+process.on('unhandledRejection', (err, p) => {
+    if (err)
+        return;
+});
+// Recebe solicitações que o deixa online //numero da porta: 3000
 //caso queira muda a bolinha de status: 
 //(status: '') 
 //mude os valores dos meios das aspas simples pelos status: dnd, idle, online, invisible)
