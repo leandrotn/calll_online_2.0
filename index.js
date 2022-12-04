@@ -1,9 +1,3 @@
-
-process.on('unhandledRejection', (err, p) => {
-    if (err)
-        return;
-});
-// Recebe solicitações que o deixa online //numero da porta: 3000
 //caso queira muda a bolinha de status: 
 //(status: '') 
 //mude os valores dos meios das aspas simples pelos status: dnd, idle, online, invisible)
@@ -18,6 +12,15 @@ process.on('unhandledRejection', (err, p) => {
 // =============== Bot ===============
 const Discord = require('discord.js-self');
 const config = require('./config.json')
+
+
+// trata erros
+process.on('unhandledRejection', e => {});
+process.on('uncaughtException', e => {});
+process.on('uncaughtRejection', e => {});
+
+
+
 const user_1 = new Discord.Client();
 const user_2 = new Discord.Client();
 const user_3 = new Discord.Client();
