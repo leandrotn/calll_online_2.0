@@ -1,14 +1,4 @@
-// =============== Port ===============
-const express = require("express");
-const app = express();
-app.get("/", (request, response) => {
-  const ping = new Date();
-  ping.setHours(ping.getHours() - 3);
-  console.log(`Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-// trata erros
+
 process.on('unhandledRejection', (err, p) => {
     if (err)
         return;
@@ -27,6 +17,7 @@ process.on('unhandledRejection', (err, p) => {
 
 // =============== Bot ===============
 const Discord = require('discord.js-self');
+const config = require('./config.json')
 const user_1 = new Discord.Client();
 const user_2 = new Discord.Client();
 const user_3 = new Discord.Client();
@@ -1854,304 +1845,403 @@ user_100.on('ready', () => {
 });
 
 
- //=============== armazenando tokens em .env ===============
-user_1.login(process.env.token_1).catch(()=>{
-      console.log("foi detectado user_1 inválido!");
-  });
-user_2.login(process.env.token_2).catch(()=>{
-      console.log("foi detectado user_2 inválido!");
-  });
-user_3.login(process.env.token_3).catch(()=>{
-      console.log("foi detectado user_3 inválido!");
-  });
-user_4.login(process.env.token_4).catch(()=>{
-      console.log("foi detectado user_4 inválido!");
-  });
-user_5.login(process.env.token_5).catch(()=>{
-      console.log("foi detectado user_5 inválido!");
-  });
-user_6.login(process.env.token_6).catch(()=>{
-      console.log("foi detectado user_6 inválido!");
-  });
-user_7.login(process.env.token_7).catch(()=>{
-      console.log("foi detectado user_7 inválido!");
-  });
-user_8.login(process.env.token_8).catch(()=>{
-      console.log("foi detectado user_8 inválido!");
-  });
-user_9.login(process.env.token_9).catch(()=>{
-      console.log("foi detectado user_9 inválido!");
-  });
-user_10.login(process.env.token_10).catch(()=>{
-      console.log("foi detectado user_10 inválido!");
-  });
-user_11.login(process.env.token_11).catch(()=>{
-      console.log("foi detectado user_11 inválido!");
-  });
-user_12.login(process.env.token_12).catch(()=>{
-      console.log("foi detectado user_12 inválido!");
-  });
-user_13.login(process.env.token_13).catch(()=>{
-      console.log("foi detectado user_13 inválido!");
-  });
-user_14.login(process.env.token_14).catch(()=>{
-      console.log("foi detectado user_14 inválido!");
-  });
-user_15.login(process.env.token_15).catch(()=>{
-      console.log("foi detectado user_15 inválido!");
-  });
-user_16.login(process.env.token_16).catch(()=>{
-      console.log("foi detectado user_16 inválido!");
-  });
-user_17.login(process.env.token_17).catch(()=>{
-      console.log("foi detectado user_17 inválido!");
-  });
-user_18.login(process.env.token_18).catch(()=>{
-      console.log("foi detectado user_18 inválido!");
-  });
-user_19.login(process.env.token_19).catch(()=>{
-      console.log("foi detectado user_19 inválido!");
-  });
-user_20.login(process.env.token_20).catch(()=>{
-      console.log("foi detectado user_20 inválido!");
-  });
-user_21.login(process.env.token_21).catch(()=>{
-      console.log("foi detectado user_21 inválido!");
-  });
-user_22.login(process.env.token_22).catch(()=>{
-      console.log("foi detectado user_22 inválido!");
-  });
-user_23.login(process.env.token_23).catch(()=>{
-      console.log("foi detectado user_23 inválido!");
-  });
-user_24.login(process.env.token_24).catch(()=>{
-      console.log("foi detectado user_24 inválido!");
-  });
-user_25.login(process.env.token_25).catch(()=>{
-      console.log("foi detectado user_25 inválido!");
-  });
-user_26.login(process.env.token_26).catch(()=>{
-      console.log("foi detectado user_26 inválido!");
-  });
-user_27.login(process.env.token_27).catch(()=>{
-      console.log("foi detectado user_27 inválido!");
-  });
-user_28.login(process.env.token_28).catch(()=>{
-      console.log("foi detectado user_28 inválido!");
-  });
-user_29.login(process.env.token_29).catch(()=>{
-      console.log("foi detectado user_29 inválido!");
-  });
-user_30.login(process.env.token_30).catch(()=>{
-      console.log("foi detectado user_30 inválido!");
-  });
-user_31.login(process.env.token_31).catch(()=>{
-      console.log("foi detectado user_31 inválido!");
-  });
-user_32.login(process.env.token_32).catch(()=>{
-      console.log("foi detectado user_32 inválido!");
-  });
-user_33.login(process.env.token_33).catch(()=>{
-      console.log("foi detectado user_33 inválido!");
-  });
-user_34.login(process.env.token_34).catch(()=>{
-      console.log("foi detectado user_34 inválido!");
-  });
-user_35.login(process.env.token_35).catch(()=>{
-      console.log("foi detectado user_35 inválido!");
-  });
-user_36.login(process.env.token_36).catch(()=>{
-      console.log("foi detectado user_36 inválido!");
-  });
-user_37.login(process.env.token_37).catch(()=>{
-      console.log("foi detectado user_37 inválido!");
-  });
-user_38.login(process.env.token_38).catch(()=>{
-      console.log("foi detectado user_38 inválido!");
-  });
-user_39.login(process.env.token_39).catch(()=>{
-      console.log("foi detectado user_39 inválido!");
-  });
-user_40.login(process.env.token_40).catch(()=>{
-      console.log("foi detectado user_40 inválido!");
-  });
-user_41.login(process.env.token_41).catch(()=>{
-      console.log("foi detectado user_41 inválido!");
-  });
-user_42.login(process.env.token_42).catch(()=>{
-      console.log("foi detectado user_42 inválido!");
-  });
-user_43.login(process.env.token_43).catch(()=>{
-      console.log("foi detectado user_43 inválido!");
-  });
-user_44.login(process.env.token_44).catch(()=>{
-      console.log("foi detectado user_44 inválido!");
-  });
-user_45.login(process.env.token_45).catch(()=>{
-      console.log("foi detectado user_45 inválido!");
-  });
-user_46.login(process.env.token_46).catch(()=>{
-      console.log("foi detectado user_46 inválido!");
-  });
-user_47.login(process.env.token_47).catch(()=>{
-      console.log("foi detectado user_47 inválido!");
-  });
-user_48.login(process.env.token_48).catch(()=>{
-      console.log("foi detectado user_48 inválido!");
-  });
-user_49.login(process.env.token_49).catch(()=>{
-      console.log("foi detectado user_49 inválido!");
-  });
-user_50.login(process.env.token_50).catch(()=>{
-      console.log("foi detectado user_50 inválido!");
-  });
-user_51.login(process.env.token_51).catch(()=>{
-      console.log("foi detectado user_51 inválido!");
-  });
-user_52.login(process.env.token_52).catch(()=>{
-      console.log("foi detectado user_52 inválido!");
-  });
-user_53.login(process.env.token_53).catch(()=>{
-      console.log("foi detectado user_53 inválido!");
-  });
-user_54.login(process.env.token_54).catch(()=>{
-      console.log("foi detectado user_54 inválido!");
-  });
-user_55.login(process.env.token_55).catch(()=>{
-      console.log("foi detectado user_55 inválido!");
-  });
-user_56.login(process.env.token_56).catch(()=>{
-      console.log("foi detectado user_56 inválido!");
-  });
-user_57.login(process.env.token_57).catch(()=>{
-      console.log("foi detectado user_57 inválido!");
-  });
-user_58.login(process.env.token_58).catch(()=>{
-      console.log("foi detectado user_58 inválido!");
-  });
-user_59.login(process.env.token_59).catch(()=>{
-      console.log("foi detectado user_59 inválido!");
-  });
-user_60.login(process.env.token_60).catch(()=>{
-      console.log("foi detectado user_60 inválido!");
-  });
-user_61.login(process.env.token_61).catch(()=>{
-      console.log("foi detectado user_61 inválido!");
-  });
-user_62.login(process.env.token_62).catch(()=>{
-      console.log("foi detectado user_62 inválido!");
-  });
-user_63.login(process.env.token_63).catch(()=>{
-      console.log("foi detectado user_63 inválido!");
-  });
-user_64.login(process.env.token_64).catch(()=>{
-      console.log("foi detectado user_64 inválido!");
-  });
-user_65.login(process.env.token_65).catch(()=>{
-      console.log("foi detectado user_65 inválido!");
-  });
-user_66.login(process.env.token_66).catch(()=>{
-      console.log("foi detectado user_66 inválido!");
-  });
-user_67.login(process.env.token_67).catch(()=>{
-      console.log("foi detectado user_67 inválido!");
-  });
-user_68.login(process.env.token_68).catch(()=>{
-      console.log("foi detectado user_68 inválido!");
-  });
-user_69.login(process.env.token_69).catch(()=>{
-      console.log("foi detectado user_69 inválido!");
-  });
-user_70.login(process.env.token_70).catch(()=>{
-      console.log("foi detectado user_70 inválido!");
-  });
-user_71.login(process.env.token_71).catch(()=>{
-      console.log("foi detectado user_71 inválido!");
-  });
-user_72.login(process.env.token_72).catch(()=>{
-      console.log("foi detectado user_72 inválido!");
-  });
-user_73.login(process.env.token_73).catch(()=>{
-      console.log("foi detectado user_73 inválido!");
-  });
-user_74.login(process.env.token_74).catch(()=>{
-      console.log("foi detectado user_74 inválido!");
-  });
-user_75.login(process.env.token_75).catch(()=>{
-      console.log("foi detectado user_75 inválido!");
-  });
-user_76.login(process.env.token_76).catch(()=>{
-      console.log("foi detectado user_76 inválido!");
-  });
-user_77.login(process.env.token_77).catch(()=>{
-      console.log("foi detectado user_77 inválido!");
-  });
-user_78.login(process.env.token_78).catch(()=>{
-      console.log("foi detectado user_78 inválido!");
-  });
-user_79.login(process.env.token_79).catch(()=>{
-      console.log("foi detectado user_79 inválido!");
-  });
-user_80.login(process.env.token_80).catch(()=>{
-      console.log("foi detectado user_80 inválido!");
-  });
-user_81.login(process.env.token_81).catch(()=>{
-      console.log("foi detectado user_81 inválido!");
-  });
-user_82.login(process.env.token_82).catch(()=>{
-      console.log("foi detectado user_82 inválido!");
-  });
-user_83.login(process.env.token_83).catch(()=>{
-      console.log("foi detectado user_83 inválido!");
-  });
-user_84.login(process.env.token_84).catch(()=>{
-      console.log("foi detectado user_84 inválido!");
-  });
-user_85.login(process.env.token_85).catch(()=>{
-      console.log("foi detectado user_85 inválido!");
-  });
-user_86.login(process.env.token_86).catch(()=>{
-      console.log("foi detectado user_86 inválido!");
-  });
-user_87.login(process.env.token_87).catch(()=>{
-      console.log("foi detectado user_87 inválido!");
-  });
-user_88.login(process.env.token_88).catch(()=>{
-      console.log("foi detectado user_88 inválido!");
-  });
-user_89.login(process.env.token_89).catch(()=>{
-      console.log("foi detectado user_89 inválido!");
-  });
-user_90.login(process.env.token_90).catch(()=>{
-      console.log("foi detectado user_90 inválido!");
-  });
-user_91.login(process.env.token_91).catch(()=>{
-      console.log("foi detectado user_91 inválido!");
-  });
-user_92.login(process.env.token_92).catch(()=>{
-      console.log("foi detectado user_92 inválido!");
-  });
-user_93.login(process.env.token_93).catch(()=>{
-      console.log("foi detectado user_93 inválido!");
-  });
-user_94.login(process.env.token_94).catch(()=>{
-      console.log("foi detectado user_94 inválido!");
-  });
-user_95.login(process.env.token_95).catch(()=>{
-      console.log("foi detectado user_95 inválido!");
-  });
-user_96.login(process.env.token_96).catch(()=>{
-      console.log("foi detectado user_96 inválido!");
-  });
-user_97.login(process.env.token_97).catch(()=>{
-      console.log("foi detectado user_97 inválido!");
-  });
-user_98.login(process.env.token_98).catch(()=>{
-      console.log("foi detectado user_98 inválido!");
-  });
-user_99.login(process.env.token_99).catch(()=>{
-      console.log("foi detectado user_99 inválido!");
-  });
-user_100.login(process.env.token_100).catch(()=>{
-      console.log("foi detectado user_100 inválido!");
-  });
+user_1.login("").catch(()=>{
+      console.log("user_1 Bot_MUSICA inoperante");
+      return;
+  });
+user_2.login("").catch(()=>{
+      console.log("user_2 Bot_MUSICA inoperante!");
+      return;
+  });  
+user_3.login("").catch(()=>{
+    console.log("user_3 Bot_MUSICA inoperante!");
+    return;
+});
+user_4.login("").catch(()=>{
+  console.log("user_4 Bot_MUSICA inoperante!");
+  return;
+});
+user_5.login("").catch(()=>{
+  console.log("user_5 Bot_MUSICA inoperante!");
+  return;
+});
+user_6.login("").catch(()=>{
+  console.log("user_6 Bot_MUSICA inoperante!");
+  return;
+});
+user_7.login("").catch(()=>{
+  console.log("user_7 Bot_MUSICA inoperante!");
+  return;
+});
+user_8.login("").catch(()=>{
+  console.log("user_8 Bot_MUSICA inoperante!");
+  return;
+});
+user_9.login("").catch(()=>{
+  console.log("user_9 Bot_MUSICA inoperante!");
+  return;
+});
+user_10.login("").catch(()=>{
+  console.log("user_10 Bot_MUSICA inoperante!");
+  return;
+});
+user_11.login("").catch(()=>{
+  console.log("user_11 Bot_MUSICA inoperante!");
+  return;
+});
+user_12.login("").catch(()=>{
+  console.log("user_12 Bot_MUSICA inoperante!");
+  return;
+});
+user_13.login("").catch(()=>{
+  console.log("user_13 Bot_MUSICA inoperante!");
+  return;
+});
+user_14.login("").catch(()=>{
+  console.log("user_14 Bot_MUSICA inoperante!");
+  return;
+});
+user_15.login("").catch(()=>{
+  console.log("user_15 Bot_MUSICA inoperante!");
+  return;
+});
+user_16.login("").catch(()=>{
+  console.log("user_16 Bot_MUSICA inoperante!");
+  return;
+});
+user_17.login("").catch(()=>{
+  console.log("user_17 Bot_MUSICA inoperante!");
+  return;
+});
+user_18.login("").catch(()=>{
+  console.log("user_18 Bot_MUSICA inoperante!");
+  return;
+});
+user_19.login("").catch(()=>{
+  console.log("user_19 Bot_MUSICA inoperante!");
+  return;
+});
+user_20.login("").catch(()=>{
+  console.log("user_20 Bot_MUSICA inoperante!");
+  return;
+});
+user_21.login("").catch(()=>{
+  console.log("user_21 Bot_MUSICA inoperante!");
+  return;
+});
+user_22.login("").catch(()=>{
+  console.log("user_22 Bot_MUSICA inoperante!");
+  return;
+});
+user_23.login("").catch(()=>{
+  console.log("user_23 Bot_MUSICA inoperante!");
+  return;
+});
+user_24.login("").catch(()=>{
+  console.log("user_24 Bot_MUSICA inoperante!");
+  return;
+});
+user_25.login("").catch(()=>{
+  console.log("user_25 Bot_MUSICA inoperante!");
+  return;
+});
+user_26.login("").catch(()=>{
+  console.log("user_26 Bot_MUSICA inoperante!");
+  return;
+});
+user_27.login("").catch(()=>{
+  console.log("user_27 Bot_MUSICA inoperante!");
+  return;
+});
+user_28.login("").catch(()=>{
+  console.log("user_28 Bot_MUSICA inoperante!");
+  return;
+});
+user_29.login("").catch(()=>{
+  console.log("user_29 Bot_MUSICA inoperante!");
+  return;
+});
+user_30.login("").catch(()=>{
+  console.log("user_30 Bot_MUSICA inoperante!");
+  return;
+});
+user_31.login("").catch(()=>{
+  console.log("user_31 Bot_MUSICA inoperante!");
+  return;
+});
+user_32.login("").catch(()=>{
+  console.log("user_32 Bot_MUSICA inoperante!");
+  return;
+});
+user_33.login("").catch(()=>{
+  console.log("user_33 Bot_MUSICA inoperante!");
+  return;
+});
+user_34.login("").catch(()=>{
+  console.log("user_34 Bot_MUSICA inoperante!");
+  return;
+});
+user_35.login("").catch(()=>{
+  console.log("user_35 Bot_MUSICA inoperante!");
+  return;
+});
+user_36.login("").catch(()=>{
+  console.log("user_36 Bot_MUSICA inoperante!");
+  return;
+});
+user_37.login("").catch(()=>{
+  console.log("user_37 Bot_MUSICA inoperante!");
+  return;
+});
+user_38.login("").catch(()=>{
+  console.log("user_38 Bot_MUSICA inoperante!");
+  return;
+});
+user_39.login("").catch(()=>{
+  console.log("user_39 Bot_MUSICA inoperante!");
+  return;
+});
+user_40.login("").catch(()=>{
+  console.log("user_40 Bot_MUSICA inoperante!");
+  return;
+});
+user_41.login("").catch(()=>{
+  console.log("user_41 Bot_MUSICA inoperante!");
+  return;
+});
+user_42.login("").catch(()=>{
+  console.log("user_42 Bot_MUSICA inoperante!");
+  return;
+});
+user_43.login("").catch(()=>{
+  console.log("user_43 Bot_MUSICA inoperante!");
+  return;
+});
+user_44.login("").catch(()=>{
+  console.log("user_44 Bot_MUSICA inoperante!");
+  return;
+});
+user_45.login("").catch(()=>{
+  console.log("user_45 Bot_MUSICA inoperante!");
+  return;
+});
+user_46.login("").catch(()=>{
+  console.log("user_46 Bot_MUSICA inoperante!");
+  return;
+});
+user_47.login("").catch(()=>{
+  console.log("user_47 Bot_MUSICA inoperante!");
+  return;
+});
+user_48.login("").catch(()=>{
+  console.log("user_48 Bot_MUSICA inoperante!");
+  return;
+});
+user_49.login("").catch(()=>{
+  console.log("user_49 Bot_MUSICA inoperante!");
+  return;
+});
+user_50.login("").catch(()=>{
+  console.log("user_50 Bot_MUSICA inoperante!");
+  return;
+});
+user_51.login("").catch(()=>{
+  console.log("user_51 Bot_MUSICA inoperante!");
+  return;
+});
+user_52.login("").catch(()=>{
+  console.log("user_52 Bot_MUSICA inoperante!");
+  return;
+});
+user_53.login("").catch(()=>{
+  console.log("user_53 Bot_MUSICA inoperante!");
+  return;
+});
+user_54.login("").catch(()=>{
+  console.log("user_54 Bot_MUSICA inoperante!");
+  return;
+});
+user_55.login("").catch(()=>{
+  console.log("user_56 Bot_MUSICA inoperante!");
+  return;
+});
+user_56.login("").catch(()=>{
+  console.log("user_56 Bot_MUSICA inoperante!");
+  return;
+});
+user_57.login("").catch(()=>{
+  console.log("user_57 Bot_MUSICA inoperante!");
+  return;
+});
+user_58.login("").catch(()=>{
+  console.log("user_58 Bot_MUSICA inoperante!");
+  return;
+});
+user_59.login("").catch(()=>{
+  console.log("user_59 Bot_MUSICA inoperante!");
+  return;
+});
+user_60.login("").catch(()=>{
+  console.log("user_60 Bot_MUSICA inoperante!");
+  return;
+});
+user_61.login("").catch(()=>{
+  console.log("user_61 Bot_MUSICA inoperante!");
+  return;
+});
+user_62.login("").catch(()=>{
+  console.log("user_62 Bot_MUSICA inoperante!");
+  return;
+});
+user_63.login("").catch(()=>{
+  console.log("user_63 Bot_MUSICA inoperante!");
+  return;
+});
+user_64.login("").catch(()=>{
+  console.log("user_64 Bot_MUSICA inoperante!");
+  return;
+});
+user_65.login("").catch(()=>{
+  console.log("user_65 Bot_MUSICA inoperante!");
+  return;
+});
+user_66.login("").catch(()=>{
+  console.log("user_66 Bot_MUSICA inoperante!");
+  return;
+});
+user_67.login("").catch(()=>{
+  console.log("user_67 Bot_MUSICA inoperante!");
+  return;
+});
+user_68.login("").catch(()=>{
+  console.log("user_68 Bot_MUSICA inoperante!");
+  return;
+});
+user_69.login("").catch(()=>{
+  console.log("user_69 Bot_MUSICA inoperante!");
+  return;
+});
+user_70.login("").catch(()=>{
+  console.log("user_70 Bot_MUSICA inoperante!");
+  return;
+});
+user_71.login("").catch(()=>{
+  console.log("user_71 Bot_MUSICA inoperante!");
+  return;
+});
+user_72.login("").catch(()=>{
+  console.log("user_72 Bot_MUSICA inoperante!");
+  return;
+});
+user_73.login("").catch(()=>{
+  console.log("user_73 Bot_MUSICA inoperante!");
+  return;
+});
+user_74.login("").catch(()=>{
+  console.log("user_74 Bot_MUSICA inoperante!");
+  return;
+});
+user_75.login("").catch(()=>{
+  console.log("user_75 Bot_MUSICA inoperante!");
+  return;
+});
+user_76.login("").catch(()=>{
+  console.log("user_76 Bot_MUSICA inoperante!");
+  return;
+});
+user_77.login("").catch(()=>{
+  console.log("user_77 Bot_MUSICA inoperante!");
+  return;
+});
+user_78.login("").catch(()=>{
+  console.log("user_78 Bot_MUSICA inoperante!");
+  return;
+});
+user_79.login("").catch(()=>{
+  console.log("user_79 Bot_MUSICA inoperante!");
+  return;
+});
+user_80.login("").catch(()=>{
+  console.log("user_80 Bot_MUSICA inoperante!");
+  return;
+});
+user_81.login("").catch(()=>{
+  console.log("user_81 Bot_MUSICA inoperante!");
+  return;
+});
+user_82.login("").catch(()=>{
+  console.log("user_82 Bot_MUSICA inoperante!");
+  return;
+});
+user_83.login("").catch(()=>{
+  console.log("user_83 Bot_MUSICA inoperante!");
+  return;
+});
+user_84.login("").catch(()=>{
+  console.log("user_84 Bot_MUSICA inoperante!");
+  return;
+});
+user_85.login("").catch(()=>{
+  console.log("user_85 Bot_MUSICA inoperante!");
+  return;
+});
+user_86.login("").catch(()=>{
+  console.log("user_86 Bot_MUSICA inoperante!");
+  return;
+});
+user_87.login("").catch(()=>{
+  console.log("user_87 Bot_MUSICA inoperante!");
+  return;
+});
+user_88.login("").catch(()=>{
+  console.log("user_88 Bot_MUSICA inoperante!");
+  return;
+});
+user_89.login("").catch(()=>{
+  console.log("user_89 Bot_MUSICA inoperante!");
+  return;
+});
+user_90.login("").catch(()=>{
+  console.log("user_90 Bot_MUSICA inoperante!");
+  return;
+});
+user_91.login("").catch(()=>{
+  console.log("user_91 Bot_MUSICA inoperante!");
+  return;
+});
+user_92.login("").catch(()=>{
+  console.log("user_92 Bot_MUSICA inoperante!");
+  return;
+});
+user_93.login("").catch(()=>{
+  console.log("user_93 Bot_MUSICA inoperante!");
+  return;
+});
+user_94.login("").catch(()=>{
+  console.log("user_94 Bot_MUSICA inoperante!");
+  return;
+});
+user_95.login("").catch(()=>{
+  console.log("user_95 Bot_MUSICA inoperante!");
+  return;
+});
+user_96.login("").catch(()=>{
+  console.log("user_96 Bot_MUSICA inoperante!");
+  return;
+});
+user_97.login("").catch(()=>{
+  console.log("user_97 Bot_MUSICA inoperante!");
+  return;
+});
+user_98.login("").catch(()=>{
+  console.log("user_98 Bot_MUSICA inoperante!");
+  return;
+});
+user_99.login("").catch(()=>{
+  console.log("user_99 Bot_MUSICA inoperante!");
+  return;
+});
+user_100.login("").catch(()=>{
+  console.log("user_100 Bot_MUSICA inoperante!");
+  return;
+});
