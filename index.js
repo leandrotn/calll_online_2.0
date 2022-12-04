@@ -11,7 +11,7 @@
 
 // =============== Bot ===============
 const Discord = require('discord.js-self');
-const config = require('./config.json')
+
 
 
 // trata erros
