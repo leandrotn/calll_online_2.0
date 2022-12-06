@@ -1,7 +1,6 @@
 {
   "name": "botmusica",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
@@ -173,6 +172,6 @@
     "wrappy": "^1.0.2",
     "ws": "^8.5.0",
     "yallist": "^4.0.0"
-  }
+  },
+  "description": ""
 }
-
